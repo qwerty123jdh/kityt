@@ -1,0 +1,18 @@
+package com.executors;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorDemo1{
+	public static void main(String[] args) {
+		ExecutorService executor= Executors.newFixedThreadPool(3);
+		for(int i = 0; i < 3; i++) {
+			executor.execute(new myapp());
+		}
+		System.out.println("After submitting tasks");
+		System.out.println("after for loop");
+		executor.execute(new myapp());
+		executor.shutdown();
+		System.out.println("Shutting down executor");
+	}
+}

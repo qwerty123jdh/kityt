@@ -1,0 +1,50 @@
+import java.util.List;
+import java.util.Scanner;
+
+import com.beans.Book;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BookIOImplementation br= new BookIOImplementation();
+		BookOperationsImplementation bo= new BookOperationsImplementation();
+		Scanner s= new Scanner(System.in);
+		System.out.println("enter no of books u want to enter");
+	    int counter= s.nextInt();
+	    int i=0;
+	    while(i<counter)
+	    {
+	    	Book book= br.getBook();
+	    	int j=bo.addBook(book);
+	    	i++;
+	    }
+	    br.printBook(bo.books);
+       System.out.println(" enter 1 if u want to update and 2 if yoy want to find book");
+       int choice= s.nextInt();
+       if (choice==1)
+       {
+    	   Scanner w= new Scanner(System.in);
+    	   System.out.println("enter the isbn");
+    	   int isbn= w.nextInt();
+    	   System.out.println("enter the name of book");
+    	   String name= w.next();
+    	   System.out.println("enter the publication");
+    	   String pub= w.next();
+    	   System.out.println("enter the publication");
+    	   double price= w.nextDouble();
+    	   Book bk= new Book(isbn,name,pub,price);
+    	   bo.deleteBook(bk);
+       }
+       if (choice==2)
+       {
+    	   Scanner w= new Scanner(System.in);
+    	   System.out.println("enter the book name");
+    	   String name= w.next();
+    	  List<Book> newbook= bo.findBooksByName(name);
+    	  br.printBook(newbook);
+    	   
+       }
+	}
+
+}

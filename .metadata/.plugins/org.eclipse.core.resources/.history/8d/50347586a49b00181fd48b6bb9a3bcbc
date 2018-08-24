@@ -1,0 +1,11 @@
+package com.demo;
+
+public class MyInterfaceImpl implements MyInterface {
+
+	@Override
+	public void showData() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

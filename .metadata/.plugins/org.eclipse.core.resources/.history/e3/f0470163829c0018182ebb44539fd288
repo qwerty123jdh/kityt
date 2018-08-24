@@ -1,0 +1,11 @@
+package com.data;
+
+public class Suuplier implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

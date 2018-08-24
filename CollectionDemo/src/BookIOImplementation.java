@@ -1,0 +1,64 @@
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.List;
+
+import com.beans.Book;
+import com.interfaces.BookIO;
+
+public class BookIOImplementation implements BookIO {
+
+	@Override
+	public Book getBook() {
+		// TODO Auto-generated method stub
+		
+		Book books = null;
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("enter book isbn");
+		try {
+			String isbn= br.readLine();
+			int isbn1= Integer.parseInt(isbn);
+			 
+			System.out.println("enter book name");
+			String name= br.readLine();
+			
+			System.out.println("enter book publication");
+			String pub= br.readLine();
+			
+			System.out.println("enter book price");
+			String price= br.readLine();
+			double price1= Double.parseDouble(price);
+			 books= new Book(isbn1,name,pub,price1);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return books;
+		
+
+	}
+
+	@Override
+	public void printBook(List<Book> books) {
+		// TODO Auto-generated method stub
+		Iterator<Book> it=books.iterator();
+		while(it.hasNext())
+		{
+			Book data=it.next();
+			System.out.println(data);
+		}
+
+	}
+
+	@Override
+	public void printBook(Book book) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+}

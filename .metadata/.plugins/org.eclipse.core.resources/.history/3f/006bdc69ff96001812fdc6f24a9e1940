@@ -1,0 +1,8 @@
+package com.one;
+
+public class MyClass {
+
+	public void display() {
+		System.out.println("displaying MyClass");
+	}
+}

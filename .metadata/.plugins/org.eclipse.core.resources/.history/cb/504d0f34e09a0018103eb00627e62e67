@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+import com.beans.Book;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BookIOImplementation br= new BookIOImplementation();
+		BookOperationsImplementation bo= new BookOperationsImplementation();
+		Scanner s= new Scanner(System.in);
+	    int counter= s.nextInt();
+	    int i=0;
+	    while(i<counter)
+	    {
+	    	Book book= br.getBook();
+	    	int j=bo.addBook(book);
+	    	i++;
+	    }
+
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class Person {
+	
+	private int age;
+	private String name;
+	
+	public void display() {
+		System.out.println("name:-"+name+"\t"+"age:-"+age);
+	}
+public void setValues() {
+	age=22;
+	name="Rashmi";
+}
+
+public void setValues1(int a, String n) {	
+	age=a;
+	name=n;
+}
+}

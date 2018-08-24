@@ -1,0 +1,32 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DemoTransaction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			Connection connection=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=CITI12131", "sa", "sa123");
+			System.out.println("connection successful");
+			
+			Statement st= connection.createStatement();
+			st.executeUpdate("insert into employdee values(91, 'city', 10000)");
+			st.executeUpdate("insert into employdee values(92, 'city', 10000)");
+			st.executeUpdate("insert into employdee values(1, 'city', 10000)");
+			st.executeUpdate("insert into employdee values(94, 'city', 10000)");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	
+
+	}
+
+}

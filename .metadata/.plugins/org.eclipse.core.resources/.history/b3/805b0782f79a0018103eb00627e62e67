@@ -1,0 +1,7 @@
+package com.compare;
+
+import java.util.Comparator;
+
+public class MYComparator implements Comparator<T> {
+
+}

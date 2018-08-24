@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class DemoRead1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br1= new BufferedReader(new InputStreamReader(System.in));
+		try {
+			System.out.println("enter no1");
+			int no1=br.read();
+			System.out.println("u entered:-"+no1);
+			System.out.println("enter no2");
+			int no2=br1.read();
+			if(no1>no2) {
+				System.out.println("no1 is greater");
+			}
+			else
+			{
+				System.out.println("no2 is greater");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

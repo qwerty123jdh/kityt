@@ -1,0 +1,16 @@
+package com.beans;
+
+public class Book {
+	private int isbn;
+	private String name;
+	private String publication;
+	private double price;
+	
+	public Book() {
+		isbn=12;
+		name="Core Java";
+		publication="My publication";
+		price=123.50d;
+	}
+
+}

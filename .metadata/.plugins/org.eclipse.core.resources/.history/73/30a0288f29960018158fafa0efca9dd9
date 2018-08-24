@@ -1,0 +1,24 @@
+
+public class TestPerson {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Person p;
+       //p= new Person();
+       //p.setValues();
+       //p.display();
+       
+       p= new Person(23, "ietrir");
+       //p.setValues(22, "Priyanka");
+       p.display();
+       
+       p= new Person();
+       //p.setValues();
+       p.display();
+       
+       p.setAge(100);
+       p.display();
+       
+	}
+
+}

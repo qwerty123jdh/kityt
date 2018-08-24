@@ -1,0 +1,14 @@
+
+public class TestDate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  Date d;
+  d= new Date(8,2,2018);
+  d.display();
+  d.setDay(3);
+  d.getDay();
+ 
+	}
+
+}

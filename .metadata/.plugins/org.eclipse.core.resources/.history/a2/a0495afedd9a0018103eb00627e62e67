@@ -1,0 +1,46 @@
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.beans.Book;
+import com.interfaces.BookOperations;
+
+public class BookOperationsImplementation implements BookOperations {
+	
+    List<Book> books= new ArrayList<Book>();
+    Scanner s= new Scanner(System.in);
+    int counter= s.nextInt();
+    int i=0;
+  
+  
+	@Override
+	public int addBook(Book book) {
+		// TODO Auto-generated method stub
+		
+		
+		return 0;
+	}
+
+	@Override
+	public boolean deleteBook(Book book) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Book findBookById(Book book) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> findBooksByName(String book_name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+}

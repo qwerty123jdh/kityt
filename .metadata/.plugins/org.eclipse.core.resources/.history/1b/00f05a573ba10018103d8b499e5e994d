@@ -1,0 +1,6 @@
+package com.connection;
+
+public class Snippet {
+	boolean success=false;
+}
+
